@@ -33,28 +33,3 @@ export const MapContainer = styled.div`
     margin-left: -80px;
   }
 `
-
-export const Button = styled.button`
-  width: 96%;
-
-  background: #99ffe7;
-  border: 1px solid #66ffdb;
-  border-radius: 12px;
-  cursor: pointer;
-  height: 32px;
-  color: #009975;
-  font-size: 14px;
-  font-family: 'Roboto';
-  margin-bottom: 100px;
-  margin-top: 30px;
-
-  :hover {
-    background: #008062;
-    transition: all ease 0.5s;
-    color: white;
-  }
-
-  @media screen and (max-width: 700px) {
-    width: 93%;
-  }
-`

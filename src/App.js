@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import './App.css'
+import { Link, useHistory } from 'react-router-dom'
 import api from './services/api'
-import { Container, Grid, MapContainer } from './style-app'
+import { Container, Grid, MapContainer, Button } from './style-app'
 
 function App() {
   const [product, setProducts] = useState([])
+
+  const history = useHistory()
 
   async function getAll() {
     const { data } = await api.get('/')
@@ -15,6 +16,12 @@ function App() {
     setProducts(data)
 
     return product
+  }
+
+  function handleClick(id) {
+    localStorage.setItem('ID', id)
+
+    return history.push('/get')
   }
 
   useEffect(() => {
@@ -51,7 +58,9 @@ function App() {
                 <li>
                   <img src={product.image} alt="imagem" width="160" />
                 </li>
+                <Button onClick={() => handleClick(product._id)}>Perfil</Button>
               </ul>
+              <br />
             </MapContainer>
           )
         })}

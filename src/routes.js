@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import App from './App'
-import Register from './pages/Register'
+import GetId from './pages/Get-ID/GetId'
+import Register from './pages/register/Register'
 
 function Routes() {
   return (
@@ -8,6 +9,7 @@ function Routes() {
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/register" component={Register} />
+        <Route path="/get" component={GetId} />
       </Switch>
     </BrowserRouter>
   )

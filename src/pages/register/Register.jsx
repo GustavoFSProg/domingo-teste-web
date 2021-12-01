@@ -1,6 +1,6 @@
 import { Link, useHistory } from 'react-router-dom'
 import { useState } from 'react'
-import api from '../services/api'
+import api from '../../services/api'
 import { Button, Container, Input, Span } from './style'
 
 function Register() {
