@@ -29,7 +29,7 @@ export const MapContainer = styled.div`
   margin-bottom: 120px;
 
   @media screen and (max-width: 760px) {
-    width: 320px;
+    width: 270px;
     margin-left: -80px;
   }
 `
