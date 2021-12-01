@@ -47,7 +47,7 @@ export const Button = styled.button`
   color: #009975;
   font-size: 16px;
   font-family: 'Roboto';
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 
   :hover {
     background: #008062;
