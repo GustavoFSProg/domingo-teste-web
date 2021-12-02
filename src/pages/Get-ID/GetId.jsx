@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import api from '../../services/api'
+import { Button } from '../../style-app'
 import { Container, Grid, MapContainer } from './style-app'
 
 function GetId() {
   const [product, setProducts] = useState([])
+
+  const history = useHistory()
 
   async function getById() {
     const id = localStorage.getItem('ID')
@@ -16,6 +19,12 @@ function GetId() {
     setProducts(data)
 
     return product
+  }
+
+  function handleClickUpdate(id) {
+    localStorage.setItem('ID', id)
+
+    return history.push('/update')
   }
 
   useEffect(() => {
@@ -50,6 +59,9 @@ function GetId() {
             <li>
               <img src={product.image} alt="imagem" width="160" />
             </li>
+            <Button style={{ marginTop: '16px' }} onClick={() => handleClickUpdate(product._id)}>
+              Editar
+            </Button>
           </ul>
         </MapContainer>
       </Grid>
