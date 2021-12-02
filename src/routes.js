@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import App from './App'
 import GetId from './pages/Get-ID/GetId'
 import Register from './pages/register/Register'
-import Update from './pages/update/Update'
+import Update from './pages/Update/Update'
 
 function Routes() {
   return (

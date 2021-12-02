@@ -29,7 +29,7 @@ function Update() {
 
   const history = useHistory()
 
-  async function handleProduct(event) {
+  async function handleUdate(event) {
     event.preventDefault()
 
     try {
@@ -82,7 +82,7 @@ function Update() {
       <br />
 
       <form
-        onSubmit={handleProduct}
+        onSubmit={handleUdate}
         style={{
           display: 'flex',
           flexDirection: 'column',
