@@ -24,6 +24,12 @@ function App() {
     return history.push('/get')
   }
 
+  function handleClickUpdate(id) {
+    localStorage.setItem('ID', id)
+
+    return history.push('/update')
+  }
+
   useEffect(() => {
     getAll()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -58,7 +64,15 @@ function App() {
                 <li>
                   <img src={product.image} alt="imagem" width="160" />
                 </li>
-                <Button onClick={() => handleClick(product._id)}>Perfil</Button>
+                <Button style={{ marginTop: '30px' }} onClick={() => handleClick(product._id)}>
+                  Perfil
+                </Button>
+                <Button
+                  style={{ marginTop: '16px' }}
+                  onClick={() => handleClickUpdate(product._id)}
+                >
+                  Editar
+                </Button>
               </ul>
               <br />
             </MapContainer>

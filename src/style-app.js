@@ -45,8 +45,8 @@ export const Button = styled.button`
   color: #009975;
   font-size: 14px;
   font-family: 'Roboto';
-  margin-bottom: 100px;
-  margin-top: 30px;
+  /* margin-bottom: 100px; */
+  /* margin-top: 30px; */
 
   :hover {
     background: #008062;
