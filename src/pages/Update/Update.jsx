@@ -1,8 +1,7 @@
 import { Link, useHistory } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import api from '../../services/api'
 import { Button, Container, Input, Span } from './style'
-import { useEffect } from 'react/cjs/react.development'
 
 function Update() {
   const [title, setTitle] = useState('')
