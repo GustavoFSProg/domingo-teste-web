@@ -76,7 +76,7 @@ function Update() {
       </div>
       <br />
       <br />
-      <h1>Cadastro de Produtos</h1>
+      <h1>Editar Produto</h1>
       <br />
       <br />
 
